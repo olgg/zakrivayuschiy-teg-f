@@ -90,6 +90,42 @@
   font-size: 18px;
 }
 
+.card__icon-button {
+  border: none;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.card__icon-button.is-liked .main-body,
+.card__icon-button.is-liked .core,
+.card__icon-button.is-liked .contour {
+  fill: var(--heart-liked-color);
+}
+
+.card__icon-button:active .main-body,
+.card__icon-button:active .core {
+  fill: var(--heart-liked-color);
+}
+
+.card__icon-button:focus,
+.card__like-button:focus {
+  outline: none;
+}
+
+.card__like-button:focus-visible {
+  box-shadow: 2px 2px;
+}
+
+.card__icon-button:focus-visible {
+  outline: 2px solid var(--heart-contour-color);
+}
+
+.contour {
+  fill: var(--heart-contour-color);
+}
+
 .footer {
   padding-block-start: 50px;
   padding-block-end: 100px;
@@ -103,9 +139,7 @@
   flex-direction: column;
   justify-content: center;
   gap: 8px;
-  /* block-size: 84px; */
   border: 2px solid #000;
-  background-color: #fff;
   padding: 15px 20px;
 }
 

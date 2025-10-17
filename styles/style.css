@@ -92,6 +92,10 @@
 
 .card__icon-button {
   border: none;
+  outline: 2px solid transparent;
+  transition: outline 0.3s ease;
+  inline-size: 27px;
+  block-size: 24px;
 }
 
 .sparks {
@@ -114,8 +118,42 @@
   outline: none;
 }
 
+.card__like-button {
+  transition: box-shadow 0.3s ease;
+
+  inline-size: 130px;
+  block-size: 38px;
+}
+
 .card__like-button:focus-visible {
   box-shadow: 2px 2px;
+}
+
+.card__buttons-container {
+  display: grid;
+  grid-template-columns: auto min-content;
+  align-items: center;
+  justify-items: end;
+  gap: 16px;
+}
+
+.animated__button {
+  position: relative;
+  overflow: hidden;
+}
+
+.animated__button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background-color: var(--primary-color);
+  transition: transform 0.5s ease-in-out;
+  mix-blend-mode: difference;
+} 
+
+.animated__button:hover::before {
+  transform: translateX(0);
 }
 
 .card__icon-button:focus-visible {
@@ -148,7 +186,8 @@
   height: 28px;
 }
 
-.footer__text {
+.footer__text,
+.button__text {
   font-family: var(--accent-font-family);
   font-size: 14px;
 }

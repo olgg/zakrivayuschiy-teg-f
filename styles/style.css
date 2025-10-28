@@ -114,12 +114,40 @@
   font-size: 18px;
 }
 
+.card__buttons-container {
+  display: flex;
+  justify-content: end;
+  /* gap: 0px; */
+}
+
 .card__icon-button {
   border: none;
   outline: 2px solid transparent;
   transition: outline 0.3s ease;
-  inline-size: 27px;
-  block-size: 38px;
+  /* block-size: 38px; */
+
+  /* inline-size: 39px;
+
+  flex-grow: 0;
+  flex-shrink: 2; */
+}
+
+.card__icon-button .core {
+  transition: fill 0.3s linear 0.03s;
+}
+
+.card__icon-button .main-body {
+  transition: fill 0.3s linear;
+}
+
+.card__icon-button:hover .core {
+  fill: var(--heart-contour-color);
+  transition-delay: 0s;
+}
+
+.card__icon-button:hover .main-body {
+  fill: var(--heart-contour-color);
+  transition-delay: 0.05s;
 }
 
 .sparks {
@@ -155,11 +183,7 @@
   box-shadow: 2px 2px;
 }
 
-.card__buttons-container {
-  display: flex;
-  justify-content: end;
-  gap: 26px;
-}
+
 
 .animated__button {
   position: relative;
@@ -247,27 +271,34 @@
 }
 
 .dialog {
-  display: grid;
+  display: none;
   grid-template-columns: 39px 1fr;
   grid-template-rows: 39px 1fr;
   inline-size: clamp(341px, calc(336.775px + 1.127vw), 353px);
-  padding: 40px 30px;
+  padding-block-start: 40px;
+  padding-inline: 38px;
+  padding-block-end: 27px;
   align-items: center;
-  gap: 30px 20px;
+  align-content: center;
+  gap: 40px 20px;
+}
+
+.dialog[open] {
+  display: grid;
+}
+
+.dialog[open]::backdrop {
+  background-color: #000;
+  opacity: 0.75;
 }
 
 .dialog:focus {
   outline: none;
 }
 
-.dialog__icon {
-  /* display: inline-block;
-  width: 39px;
-  height: 39px; */
-}
-
 .dialog__text {
   text-transform: uppercase;
+  line-height: 150%;
 }
 
 .accept__button {

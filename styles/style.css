@@ -137,7 +137,9 @@
   align-items: center;
 }
 
-
+.card__icon-button:hover {
+  cursor: pointer;
+}
 
 .card__icon-button .core {
   fill: transparent;
@@ -204,6 +206,10 @@
 .card__like-button {
   inline-size: 130px;
   block-size: 38px;
+}
+
+.card__like-button:hover {
+  cursor: pointer;
 }
 
 .shadow-focused {

@@ -21,7 +21,7 @@
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-variation-settings: 'wght' var(--main-font-min-weight);
+  font-variation-settings: 'wght' 410;
 }
 
 
@@ -31,7 +31,7 @@
 }
 
 .header {
-  padding-top: 98px;
+  padding-top: 100px;
   padding-bottom: 100px;
 }
 
@@ -71,7 +71,7 @@
 .card__title {
   padding: 5px 10px 3px;
   font-size: 18px;
-  font-variation-settings: 'wdth' var(--main-font-max-weight);
+  font-variation-settings: 'wdth' 715;
 
   line-height: 22px;
 }
@@ -137,7 +137,7 @@
   align-items: center;
 }
 
-.card__icon-button:hover {
+.cursor__pointer-button {
   cursor: pointer;
 }
 
@@ -206,10 +206,6 @@
 .card__like-button {
   inline-size: 130px;
   block-size: 38px;
-}
-
-.card__like-button:hover {
-  cursor: pointer;
 }
 
 .shadow-focused {
@@ -341,10 +337,12 @@ main {
 @media (width > 375px) {
 
   .header {
-    padding-top: 78px;
+    padding-top: 100px;
     padding-bottom: 96px;
   }  
-
+  .header__container {
+    gap: 18px;
+  }
   .save__button {
     flex-direction: row;
     align-items: center;
@@ -361,7 +359,7 @@ main {
 }
 
 @supports((text-stroke: 1px var(--text-stroke-color)) or (-webkit-text-stroke: 1px var(--text-stroke-color))) {
-  .card__image::before  {
+  .card__image-label {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--text-stroke-color);
     text-stroke: 1px var(--text-stroke-color);

@@ -112,7 +112,7 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
-  padding: 25px 25px 21px;
+  padding: 25px;
   font-size: 18px;
   line-height: 21px;
 }
@@ -120,13 +120,23 @@
 .card__buttons-container {
   display: flex;
   justify-content: end;
+  align-items: center;
+
+  gap: 6px;
 }
 
 .card__icon-button {
   border: none;
+  padding: 0;
   outline: 2px solid transparent;
   transition: outline 0.3s ease;
+  height: 34px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 
 
 .card__icon-button .core {
@@ -328,10 +338,6 @@ main {
     padding-top: 78px;
     padding-bottom: 96px;
   }  
-
-  .card:not(:last-child) {
-    margin-bottom: 50px;
-  }
 
   .save__button {
     flex-direction: row;
